@@ -34,5 +34,34 @@ console.log(myParagraphSibling);
 let link = document.querySelector("a");
 link.href = "https://www.google.com";
 
-myParagraph.id = 'a-new-element-id';
-myParagraph.style.backgroundColor = "#ff0000";
+let isStyled = false;
+document.addEventListener('click', () => {
+    if (isStyled) {
+        myParagraph.style.backgroundColor = null; 
+        isStyled = false; 
+    }
+    else {
+        myParagraph.style.backgroundColor = "#ff0000";
+        isStyled = true;
+    }
+    myParagraph.id = 'a-new-element-id';
+});
+
+const usernameInput = document.getElementById('username');
+usernameInput.addEventListener('change', () => {
+    console.log(usernameInput.value);
+});
+// try this with 'input' instead of change
+
+const form = document.querySelector('form')
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const data = new FormData(form);
+    // this is taking all of the user-entered data from the form 
+    // and putting it into a FormData object
+    // 
+    // this requires adding names to input tags
+    console.log(data.get('username'));
+    console.log(data.get('password'));
+});
