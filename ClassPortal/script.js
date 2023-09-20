@@ -4,7 +4,7 @@ console.log("This is working");
 // seems legit
 function checkMediaQuery() {
     // If the inner width of the window is less than 400px
-    if (window.innerWidth < 400) {
+    if (window.innerWidth < 500) {
         // Then abbreviate these titles
         document.body.querySelector("#assignments").innerHTML = "A";
         document.body.querySelector("#projects").innerHTML = "P";
