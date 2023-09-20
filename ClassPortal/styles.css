@@ -45,7 +45,7 @@ nav ul {
 
 main {
     display: grid;
-    width: 80vw;
+    width: 100vw;
     height: 84vh;
     margin: 0 auto;
     align-items: center;
@@ -63,7 +63,7 @@ h1 {
 .main-item {
     padding: 25px;
     border: 2px solid white;
-    margin: 20px 0;
+    margin: 0 20%;
 }
 
 #ellipse {
@@ -95,9 +95,8 @@ footer {
     padding: 0 10px;
 }
 
-@media (max-width: 315px) {
-    #main-portal {
-        width: 100vw;
-        min-width: 50px;
+@media (max-width: 520px) {
+    .lengthy-main {
+        height: unset;
     }
 }
