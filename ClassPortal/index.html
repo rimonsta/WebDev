@@ -14,31 +14,29 @@
         <header>
             <nav id="nav">
                 <ul>
-                    <li>Assignments</li>
-                    <li>Projects</li>
+                    <li class="page" data-abbr="A">Assignments</li>
+                    <li class="page" data-abbr="P">Projects</li>
                 </ul>
             </nav>
         </header>
         <main>
-          <!-- make div containing svg and h1/title as siblings-->
-          <!-- use relative positioning to put them in top left corner (top 0 left 0)-->
-          <div id="site-title">
+          <div id="main-portal">
             <svg id="ellipse" viewBox="-100, -50, 200, 100">
               <ellipse cx="0" cy="0" rx="100" ry="50" stroke="white" fill-opacity="0%" />
-                <text class="cap-title" fill="white" x="-30" y="-20">
+                <text class="cap-title" fill="#404040" x="-30" y="-20">
                   Riley Meere's
                 </text>
-                <text fill="white" x="-54" y="3">
-                  w e b _ d e v e l o p m e n t
+                <text id="broad-subject" fill="#404040" x="-80" y="3">
+                  web front-end development
                 </text>
-                <text class="cap-title" fill="white" x="-30" y="30">
+                <text class="cap-title" fill="#404040" x="-30" y="30">
                   Class Portal
                 </text>
             </svg>
           </div>
         </main>
         <footer>
-            <nav>
+            <div id="social-media">
                 <ul>
                   <li>
                     <a href="https://github.com/rimonsta">
@@ -73,7 +71,7 @@
                     </a>
                   </li>
                 </ul>
-            </nav>
+              </div>
         </footer>
     </body>
 </html>

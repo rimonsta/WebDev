@@ -7,36 +7,28 @@
 body {
     color: white;
     font-family: Comfortaa, monospace;
-}
-
-#nav {
-    text-transform: uppercase;
-    text-align: center;
-}
-
-#nav ul {
     margin: 0;
 }
-  
-#nav li {
-    display: inline; /* makes list items appear on same line */
-}
-  
-#nav a {
-    /*padding: 0.5em; /* in this case padding is only applied to left and right sides, not top and bottom, because element is inline 
-    color: white;
-    text-decoration: none; */
-    display: inline-block; /* this allows for padding on top and bottom */
+
+ul {
+    list-style-type: none;
 }
 
-main {
-    width: 100%;
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.0625em;
 }
 
-#site-title {
+#main-portal {
     display: grid;
-    width: 33%;
-    height: 70vh;
+    width: 80vw;
+    height: 80vh;
+    min-width: 300px;
     margin: 0 auto;
     align-items: center;
 }
@@ -52,6 +44,28 @@ svg {
     font-size: 0.5em;
 }
 
+#broad-subject {
+    letter-spacing: 0.125rem;
+}
+
 .cap-title {
     text-transform: uppercase;
+}
+
+#social-media ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+}
+
+#social-media li {
+    padding: 0 10px;
+}
+
+@media (max-width: 315px) {
+    #main-portal {
+        width: 100vw;
+        min-width: 50px;
+    }
 }
