@@ -10,6 +10,10 @@ body {
     margin: 0;
 }
 
+header {
+    height: 8vh;
+}
+
 a {
     color: inherit;
     text-decoration: inherit;
@@ -39,11 +43,10 @@ nav ul {
     padding: 20px;
 }
 
-.main-content {
+main {
     display: grid;
     width: 80vw;
-    height: 80vh;
-    min-width: 300px;
+    height: 84vh;
     margin: 0 auto;
     align-items: center;
 }
@@ -57,7 +60,7 @@ h1 {
     font-size: 1rem;
 }
 
-.content-item {
+.main-item {
     padding: 25px;
     border: 2px solid white;
     margin: 20px 0;
@@ -75,6 +78,10 @@ h1 {
 
 .cap-title {
     text-transform: uppercase;
+}
+
+footer {
+    display: block;
 }
 
 #social-media ul {
