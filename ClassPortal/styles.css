@@ -53,6 +53,10 @@ svg {
     overflow-clip-margin: 10px;
 }
 
+h1 {
+    font-size: 1rem;
+}
+
 .content-item {
     padding: 25px;
     border: 2px solid white;
