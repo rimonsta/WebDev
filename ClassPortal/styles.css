@@ -66,6 +66,10 @@ h1 {
     margin: 20px 20%;
 }
 
+.main-item a {
+    text-decoration: underline;
+}
+
 #ellipse {
     width: 80%; 
     height: 40%;
