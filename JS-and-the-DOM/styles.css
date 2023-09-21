@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+:root {
+    --primary-color: #3D0101;
+    --secondary-color: #FAC3C9;
+    --tertiary-color: #A1132B;
+}
+
+
+* {
+    color: var(--secondary-color);
+}
+
+html {
+    background-color: var(--primary-color);
+}
+
+main {
+    height: 80vw;
+    margin: 10vh auto;
+}
+
+#bdaysurprise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+}
+
+img {
+    border: 5px solid var(--tertiary-color);
+    border-radius: 6%;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: Special Elite, fantasy;
+    font-variant: small-caps;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    font-family: monospace;
+}
+
+input {
+    margin: auto 3px;
+}
+
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: var(--tertiary-color);
+    font-size: 4rem;
+    user-select: none;
+    animation: vapour 1s ease-in-out;
+}
+
+@keyframes vapour {
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -250%);
+    }
+}
+

@@ -1,4 +1,4 @@
-const myParagraph = document.getElementById('my-specific-paragraph');
+/*const myParagraph = document.getElementById('my-specific-paragraph');
 console.log(myParagraph);
 
 const myParagraphs = document.getElementsByClassName('my-paragraph');
@@ -65,3 +65,41 @@ form.addEventListener('submit', (event) => {
     console.log(data.get('username'));
     console.log(data.get('password'));
 });
+THIS WAS ALL FROM THE IN CLASS EXAMPLES ^
+*/
+
+
+console.log("this is working");
+const secretPassword = "sarahsmiles";
+const bdaySurprise = document.getElementById('bdaysurprise');
+const submitForm = document.querySelector('form');
+submitForm.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const data = new FormData(submitForm);
+    console.log(data.get('password'));
+
+    const userInput = data.get('password');
+
+    if (userInput === secretPassword) {
+        console.log("password correct");
+        bdaySurprise.style.visibility = "visible";
+        // CSS property
+    }
+    
+})
+
+// learned how to add this animation from: https://www.youtube.com/watch?v=9KaUzmdGrWU
+function heartAnimation(e) {
+    let x = e.clientX - 30, 
+        y = e.clientY - 50, 
+        heart = `<span class="heart" style="left:${x}px; top:${y}px">♡</span>`;
+
+    document.body.insertAdjacentHTML('beforeend', heart);
+
+    setTimeout(() => document.querySelector('.heart').remove(), 1000);
+}
+
+document.addEventListener('click', (e) => {
+    heartAnimation(e);
+})
