@@ -93,6 +93,7 @@ let secretPasswords = [
     }
 ]
 
+// this shit prevents zoom after double tap on safari mobile!! from @prohibited509 on stackoverflow
 document.addEventListener('dblclick', function(el) {
     el.preventDefault();
 });
@@ -130,7 +131,6 @@ function heartAnimation(e) {
 
     setTimeout(() => document.querySelector('.heart').remove(), 1000);
 }
-
 document.addEventListener('click', (e) => {
     heartAnimation(e);
 })
