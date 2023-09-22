@@ -68,9 +68,31 @@ form.addEventListener('submit', (event) => {
 THIS WAS ALL FROM THE IN CLASS EXAMPLES ^
 */
 
-
+// this is to make sure the script file is properly linked
 console.log("this is working");
-const secretPassword = "sarahsmiles";
+
+// passwords
+let secretPasswords = [
+    {
+        "name": "Ellen",
+        "birthday": new Date('September 21'),
+        "imgsrc": "assets/ellenbday.jpg",
+        "password": "elegantellen"
+    },
+    {
+        "name": "Sarah",
+        "birthday": new Date('September 19'),
+        "imgsrc": "assets/sarahbday.jpg",
+        "password": "sarahsmiles"
+    },
+    {
+        "name": "Caitlin",
+        "birthday": new Date('September 23'),
+        "imgsrc": "assets/caitbday.jpg",
+        "password": "cutiecait"
+    }
+]
+
 const bdaySurprise = document.getElementById('bdaysurprise');
 const submitForm = document.querySelector('form');
 submitForm.addEventListener('submit', event => {
@@ -80,10 +102,15 @@ submitForm.addEventListener('submit', event => {
     console.log(data.get('password'));
 
     const userInput = data.get('password');
+    let user = secretPasswords.find(user => user.password === userInput);
+    console.log(user);
 
-    if (userInput === secretPassword) {
+    if (user) {
         console.log("password correct");
+        bdaySurprise.getElementById('pic').src = user.imgsrc;
+        bdaySurprise.getElementById('message').innerHTML = "Happy Birthday "+user.name+"!";
         bdaySurprise.style.visibility = "visible";
+        
         // CSS property
     }
     
