@@ -76,7 +76,7 @@ let secretPasswords = [
     {
         "name": "Ellen",
         "birthday": new Date('September 21'),
-        "imgsrc": "assets/ellenbday.jpg",
+        "imgsrc": "assets/ellenbdayy.jpg",
         "password": "elegantellen"
     },
     {
@@ -116,6 +116,7 @@ submitForm.addEventListener('submit', event => {
 })
 
 // learned how to add this animation from: https://www.youtube.com/watch?v=9KaUzmdGrWU
+// still not sure what is the difference between e and event
 function heartAnimation(e) {
     let x = e.clientX - 30, 
         y = e.clientY - 50, 
