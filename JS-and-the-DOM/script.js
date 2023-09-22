@@ -93,6 +93,10 @@ let secretPasswords = [
     }
 ]
 
+document.addEventListener('dblclick', function(el) {
+    el.preventDefault();
+});
+
 const bdaySurprise = document.getElementById('bdaysurprise');
 const submitForm = document.querySelector('form');
 submitForm.addEventListener('submit', event => {

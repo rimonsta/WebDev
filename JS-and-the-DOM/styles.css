@@ -9,7 +9,6 @@
 
 * {
     color: var(--secondary-color);
-    touch-action: manipulation;
 }
 
 html {
