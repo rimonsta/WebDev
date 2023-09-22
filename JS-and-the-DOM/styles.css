@@ -9,14 +9,11 @@
 
 * {
     color: var(--secondary-color);
+    touch-action: manipulation;
 }
 
 html {
     background-color: var(--primary-color);
-}
-
-body {
-    touch-action: none;
 }
 
 main {
