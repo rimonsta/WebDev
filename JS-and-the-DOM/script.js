@@ -107,10 +107,9 @@ submitForm.addEventListener('submit', event => {
 
     if (user) {
         console.log("password correct");
-        bdaySurprise.getElementById('pic').src = user.imgsrc;
-        bdaySurprise.getElementById('message').innerHTML = "Happy Birthday "+user.name+"!";
+        document.getElementById('pic').src = user.imgsrc;
+        document.getElementById('message').innerHTML = "Happy Birthday "+user.name+"!";
         bdaySurprise.style.visibility = "visible";
-        
         // CSS property
     }
     
