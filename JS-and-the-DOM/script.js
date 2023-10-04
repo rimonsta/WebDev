@@ -90,6 +90,18 @@ let secretPasswords = [
         "birthday": new Date('September 23'),
         "imgsrc": "assets/caitbday.jpg",
         "password": "cutiecait"
+    },
+    {
+        "name": "Emma",
+        "birthday": new Date ('September 24'),
+        "imgsrc": "assets/emmarafbday.jpg",
+        "password":  "effervescentemma"
+    },
+    {
+        "name": "Jess",
+        "birthday": new Date ('September 26'),
+        "imgsrc": "assets/jessbday.jpg",
+        "password": "joyfuljess"
     }
 ]
 
