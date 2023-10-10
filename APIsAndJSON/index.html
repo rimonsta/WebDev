@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="description" content="This is Assignment 2 for the class Web Front-End Development taught by Peter Rosenthal in the ATLAS department at CU Boulder. It covers forms.">
+        <title>HTML Forms</title>
+        <link rel="stylesheet" href="styles.css" /> 
+        <script defer src="script.js"></script> 
+    </head>
+    <body>
+        <h1>HTML Forms</h1>
+        <main>
+            <form>
+                <div>
+                    <label for="year">Which year were you born in? </label>
+                    <input id="year" name="year" type="number" min="1923" max="2023" step="1" value="2000"/>    
+                </div>
+                <fieldset>
+                    <legend>Which is your dominant hand? </legend>
+                    <input id="left" name="dom-hand" value="left" type="radio" />
+                    <label for="left">Left</label>
+                    <input id="right" name="dom-hand" value="right" type="radio" />
+                    <label for="right">Right</label>
+                </fieldset>
+                <div>
+                    <label for="color">Pick a color: </label>
+                    <input id="colorpicker" name="color" type="color" />    
+                </div>
+                <div>
+                    <label for="userimg">Import a photo: </label>
+                    <input id="userimg" name="userimg" type="file" accept="image/png, image/jpg, image/jpeg" />    
+                </div>
+                <div>
+                    <label for="journal">Share a message: </label>
+                    <textarea id="journal" name="journal"></textarea>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
