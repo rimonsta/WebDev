@@ -9,31 +9,109 @@
         <script defer src="script.js"></script> 
     </head>
     <body>
-        <h1>HTML Forms</h1>
+        <h1>what died?</h1>
         <main>
             <form>
-                <div>
-                    <label for="year">Which year were you born in? </label>
-                    <input id="year" name="year" type="number" min="1923" max="2023" step="1" value="2000"/>    
-                </div>
                 <fieldset>
-                    <legend>Which is your dominant hand? </legend>
-                    <input id="left" name="dom-hand" value="left" type="radio" />
-                    <label for="left">Left</label>
-                    <input id="right" name="dom-hand" value="right" type="radio" />
-                    <label for="right">Right</label>
+                    <legend>what is its name?</legend>
+                    <div>
+                        <input type="text" id="name" name="name" />
+                    </div>
                 </fieldset>
+
+                <fieldset>
+                    <legend>what's it made of?</legend>
+                    <div>
+                        <select name="material" id="material">
+                            <option value=""></option>
+                            <option value="plastic">plastic</option>
+                            <option value="metal">metal</option>
+                            <option value="tree">tree</option>
+                            <option value="fabric">fabric</option>
+                            <option value="food">food</option>
+                            <option value="earth">ceramic/clay</option>
+                            <option value="glass">glass</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>when did you get it?</legend>
+                    <div>
+                        <input type="date" id="birthday" name="birthday" />
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>is it...</legend>
+                    <div>
+                        <input type="checkbox" id="broken" name="broken"/>
+                        <label for="broken">broken</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="useless" name="useless" />
+                        <label for="useless">useless</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="worthless" name="worthless" />
+                        <label for="worthless">worthless</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="obsolete" name="obsolete" />
+                        <label for="obsolete">obsolete</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="unnecessary" name="unnecessary" />
+                        <label for="unnecessary">unnecessary</label>
+                    </div>
+                </fieldset>
+                    
+                <fieldset>
+                    <legend>what would happen if it stayed where it is forever?</legend>
+                    <div>
+                        <input type="radio" id="rot" name="remains" />
+                        <label for="rot">it would rot</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="obstruct" name="remains" />
+                        <label for="obstruct">it would be in the way</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="nothing" name="remains" />
+                        <label for="nothing">nothing</label>
+                    </div>
+                </fieldset>
+                        
+                    <!-- <div>
+                        <input id="rot" name="remains" value="rot" type="radio" />
+                        <label for="remains">it would rot</label>
+                    </div>
+                    <div>
+                        <input id="obstruct" name="remains" value="obstruct" type="radio" />
+                        <label for="remains">it would be in the way</label>
+                    </div>
+                    <div>
+                        <input id="nothing" name="remains" value="nothing" type="radio" />
+                        <label for="remains">nothing</label>
+                    </div> -->
+                </fieldset>
+
+                <fieldset>
+                    <legend>what color is it?</legend>
+                    <div>
+                        <input id="colorpicker" name="color" type="color" />
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>import a photo</legend>
+                    <div>
+                        <input id="userimg" name="userimg" type="file" accept="image/png, image/jpg, image/heic" />    
+                    </div>
+                </fieldset>
+
                 <div>
-                    <label for="color">Pick a color: </label>
-                    <input id="colorpicker" name="color" type="color" />    
-                </div>
-                <div>
-                    <label for="userimg">Import a photo: </label>
-                    <input id="userimg" name="userimg" type="file" accept="image/png, image/jpg, image/jpeg" />    
-                </div>
-                <div>
-                    <label for="journal">Share a message: </label>
-                    <textarea id="journal" name="journal"></textarea>
+                    <button type="submit">SUBMIT</button>
                 </div>
             </form>
         </main>
