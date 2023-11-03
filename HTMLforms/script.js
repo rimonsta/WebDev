@@ -124,7 +124,6 @@ function showObit(){
             console.log(materialsNodeList[i].id);
         }
     }
-    console.log("potential lifetime: " + potentialLifetime)
     console.log("age: " + age.value);
     console.log("level of hell: " + levelOfHell.value);
     console.log("consequences: ");
@@ -178,6 +177,8 @@ function updateImages(materials){
         otherImg.style.display = 'none';
     }
 
+
+    console.log("potential lifetime: " + potentialLifetime)
     return potentialLifetime;
 }
 
