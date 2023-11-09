@@ -2,6 +2,11 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background: white;
 }
 
 main {
@@ -15,18 +20,28 @@ fieldset {
     margin: 2 rem 0;
 }
 
-fieldset, .buttons {
-    display: none;
-}
-
 button {
-    display: flex;
     text-decoration: none;
     text-align: center;
     cursor: pointer;
-    width: 50%;
+    width: 48%;
     padding: 0.5rem;
-    margin-top: 0.5rem;
+    color: black;
+    text-shadow: none;
+    display: inline-block;
+    align-items: flex-start;
+    background-color: white;
+    writing-mode: horizontal-tb !important;
+    padding-block: 0.5rem;
+    padding-inline: 0.5rem;
+    border-width: 1px;
+    border-style: outset;
+    border-color: black;
+    border-image: initial;
+}
+
+fieldset, .buttons {
+    display: none;
 }
 
 .materialImg {
@@ -39,16 +54,13 @@ fieldset.active-step {
 
 .buttons.active-step {
     display: flex;
-}
-
-.btn-next {
-    margin-left: 0.25rem;
+    margin: 0.5rem auto;
+    justify-content: space-between;
 }
 
 #first-btn {
     flex-direction: row-reverse;
 }
-
 
 #formTitle {
     text-align: center;
