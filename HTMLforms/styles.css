@@ -5,6 +5,12 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+svg {
+    display: none;
+    width: 20vw;
+    margin: auto;
+}
+
 body {
     background: white;
 }
@@ -70,6 +76,10 @@ fieldset.active-step {
     text-align: center;
     display: none;
 }
+
+/* #ageObit {
+    margin-top: 0;
+} */
 
 #obitForm {
     width: clamp(320px, 30%, 430px);

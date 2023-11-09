@@ -15,7 +15,7 @@ const nextBtns = document.querySelectorAll('.btn-next');
 const formSteps = document.querySelectorAll('fieldset');
 const buttons = document.querySelectorAll('.buttons');
 
-const obitTitle = document.getElementById('obitTitle');
+const formTitle = document.getElementById('formTitle');
 const ageObit = document.getElementById('ageObit');
 
 const dinosaurImg = document.getElementById("dinosaurImg");
@@ -68,9 +68,9 @@ submitter.addEventListener("click", () => {
         button.classList.remove('active-step');
     });
 
-    showObit();
-    document.querySelector('#obit').style.display = "block";
     obitForm.style.display = "none";
+    updateObit();
+    document.querySelector('#obit').style.display = "block";
 });
 
 obitForm.addEventListener("submit", handleSubmit);
@@ -144,10 +144,10 @@ function showAge(rangeVal) {
 //     }
 // }
 
-function showObit(){
+function updateObit(){
 
     updateTitle(itemName);
-    updateAgeObit(updateImages(materialsNodeList));
+    updateAgeObit(updateImages(document.obitForm.material));
 
     console.log("name: " + itemName.value);
     console.log("materials: ");
@@ -168,21 +168,21 @@ function showObit(){
 }
 
 function updateTitle(name){
-    obitTitle.innerHTML = "RIP " + name.value;
+    formTitle.innerHTML = "RIP " + name.value;
 }
 
 function updateImages(materials){
     let potentialLifetime = 0;
 
     if(materials[0].checked){
-        dinosaurImg.style.display = "flex";
+        dinosaurImg.style.display = "block";
         potentialLifetime +=7;
     } else {
         dinosaurImg.style.display = "none";
     }
 
     if(materials[1].checked) {
-        rockEarthImg.style.display = 'flex';
+        rockEarthImg.style.display = 'block';
         potentialLifetime +=2;
         
     } else {
@@ -190,21 +190,21 @@ function updateImages(materials){
     }
 
     if(materials[2].checked) {
-        plantImg.style.display = 'flex';
+        plantImg.style.display = 'block';
         potentialLifetime +=3;
     } else {
         plantImg.style.display = 'none';
     }
 
     if(materials[3].checked) {
-        animalImg.style.display = 'flex';
+        animalImg.style.display = 'block';
         potentialLifetime +=5;
     } else {
         animalImg.style.display = 'none';
     }
 
     if(materials[4].checked) {
-        otherImg.style.display = 'flex';
+        otherImg.style.display = 'block';
         potentialLifetime +=3;
     } else {
         otherImg.style.display = 'none';
