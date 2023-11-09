@@ -6,7 +6,7 @@ const materialsNodeList = document.obitForm.material;
 const age = document.getElementById('age');
 const levelOfHell = document.getElementById('level');
 const consequences = document.obitForm.consequences;
-const color = document.getElementById('colorpicker');
+const color = document.getElementById('color');
 
 const submitter = document.getElementById('btn-submit');
 
@@ -29,8 +29,12 @@ const otherImg = document.getElementById("otherImg");
 let formStepsNum = 0;
 nextBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-        formStepsNum++;
-        updateFormSteps();
+        if(inputValidation(btn.name, formStepsNum)==1){
+            formStepsNum++;
+            updateFormSteps();
+        } else {
+            showError();
+        }
     });
 });
 
@@ -66,12 +70,41 @@ submitter.addEventListener("click", () => {
 
     showObit();
     document.querySelector('#obit').style.display = "block";
+    obitForm.style.display = "none";
 });
 
 obitForm.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event){
     event.preventDefault();
+}
+
+function inputValidation(input, step){
+    const val = document.getElementById(input);
+
+    switch(step){
+        case 1:
+            let numChecks = 0;
+            for (let i = 0; i < materialsNodeList.length; i++) {
+                if (materialsNodeList[i].checked) {
+                    numChecks++;
+                }
+            }
+            if(numChecks == 0) return 0;
+            else return 1;
+        case 4:
+            if(!consequences.value) return 0;
+            else return 1;
+        default:
+            if(!val.value) return 0;
+            else return 1;
+    }
+
+    // if(!input.value){
+    //     return 0;
+    // } else {
+    //     return 1;
+    // }
 }
 
 function showAge(rangeVal) {
@@ -115,7 +148,6 @@ function showObit(){
 
     updateTitle(itemName);
     updateAgeObit(updateImages(materialsNodeList));
-    
 
     console.log("name: " + itemName.value);
     console.log("materials: ");
@@ -150,17 +182,18 @@ function updateImages(materials){
     }
 
     if(materials[1].checked) {
+        rockEarthImg.style.display = 'flex';
+        potentialLifetime +=2;
+        
+    } else {
+        rockEarthImg.style.display = 'none';
+    }
+
+    if(materials[2].checked) {
         plantImg.style.display = 'flex';
         potentialLifetime +=3;
     } else {
         plantImg.style.display = 'none';
-    }
-
-    if(materials[2].checked) {
-        rockEarthImg.style.display = 'flex';
-        potentialLifetime +=2;
-    } else {
-        rockEarthImg.style.display = 'none';
     }
 
     if(materials[3].checked) {
@@ -192,4 +225,17 @@ function updateAgeObit(materialLifetime) {
 
 function changeColor(color) {
     document.body.style.background = color;
+    if(color != "#000000"){
+        document.body.style.color = "#000000";
+    } else {
+        document.body.style.color = "#FFFFFF";
+    }
+}
+
+function showError() {
+    try {
+        throw new Error('this is an error!');
+      } catch (e) {
+        console.error(e);
+      }
 }

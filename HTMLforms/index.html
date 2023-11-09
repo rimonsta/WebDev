@@ -67,8 +67,8 @@
                     </div>
                 </fieldset>
 
-                <div class="buttons active-step">
-                    <button class="btn-next">NEXT</button>
+                <div id="first-btn" class="buttons active-step">
+                    <button name="name" class="btn-next">NEXT</button>
                 </div>
 
                 <fieldset>
@@ -97,7 +97,7 @@
 
                 <div class="buttons">
                     <button class="btn-prev">PREVIOUS</button>
-                    <button id="submit-materials" class="btn-next">NEXT</button>
+                    <button name="material" id="submit-materials" class="btn-next">NEXT</button>
                 </div>
 
                 <fieldset>
@@ -110,7 +110,7 @@
 
                 <div class="buttons">
                     <button class="btn-prev">PREVIOUS</button>
-                    <button class="btn-next">NEXT</button>
+                    <button name="age" class="btn-next">NEXT</button>
                 </div>
 
                 <fieldset>
@@ -127,7 +127,7 @@
 
                 <div class="buttons">
                     <button class="btn-prev">PREVIOUS</button>
-                    <button class="btn-next">NEXT</button>
+                    <button name="level" class="btn-next">NEXT</button>
                 </div>
                     
                 <fieldset>
@@ -148,19 +148,19 @@
 
                 <div class="buttons">
                     <button class="btn-prev">PREVIOUS</button>
-                    <button class="btn-next">NEXT</button>
+                    <button name="consequences" class="btn-next">NEXT</button>
                 </div>
                         
                 <fieldset>
                     <legend>what color is it?</legend>
                     <div>
-                        <input id="colorpicker" name="color" type="color" oninput="changeColor(this.value)"/>
+                        <input id="color" name="color" type="color" oninput="changeColor(this.value)"/>
                     </div>
                 </fieldset>
 
                 <div class="buttons">
                     <button class="btn-prev">PREVIOUS</button>
-                    <button type="submit" id="btn-submit">SUBMIT</button>
+                    <button name="color" type="submit" id="btn-submit">SUBMIT</button>
                 </div>
 
             </form>
